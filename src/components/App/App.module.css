@@ -1,0 +1,67 @@
+:root {
+  --padding--global: 20px;
+  --x1: 4px;
+  --x2: 8px;
+  --x3: 12px;
+  --x4: 16px;
+  --x5: 20px;
+  --x6: 24px;
+  --x8: 32px;
+  --x10: 40px;
+}
+
+.root {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    ". main ."
+    ". author .";
+  row-gap: 12px;
+  padding: var(--padding--global) 0;
+  font-family: sans-serif;
+  color: #444;
+}
+
+.main {
+  grid-area: main;
+  height: calc(100vh);
+  border-radius: 16px;
+  box-shadow: 0px 0px var(--x2) var(--x1) #bbb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+.input {
+  border: 2px solid #bbb;
+  border-radius: var(--x2);
+  height: 40px;
+  font-size: 20px;
+  line-height: 30px;
+  width: 300px;
+  text-align: center;
+  padding: var(--x1) var(--x3);
+}
+
+.input:active,
+.input:focus {
+  outline: none;
+  border: 2px solid #777;
+}
+
+.gif {
+  max-width: 200px;
+  height: auto;
+  object-fit: scale-down;
+}
+
+.author {
+  grid-area: author;
+  display: flex;
+  justify-content: center;
+}
